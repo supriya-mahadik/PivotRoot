@@ -1,22 +1,32 @@
 body {font-family: Arial;}
+.note {
+    border-radius: 10px 10px 0 0;
+    background-color: darksalmon;
+    width:fit-content;
+    padding:10px;
+    margin-left:2%;
+}
 
 /* Style the tab */
 .tab {
   overflow: hidden;
-  border: 1px solid #ccc;
-  background-color: #f1f1f1;
+  background-color: blueviolet;
+  border-radius: 20px 20px 0 0;
+  padding: 30px 30px 0 30px;
 }
 
 /* Style the buttons inside the tab */
 .tab button {
   background-color: inherit;
   float: left;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  padding: 14px 16px;
-  transition: 0.3s;
-  font-size: 17px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 9px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+    border-radius: 20px;
+    font-weight: bold;
 }
 
 /* Change background color of buttons on hover */
@@ -26,28 +36,46 @@ body {font-family: Arial;}
 
 /* Create an active/current tablink class */
 .tab button.active {
-  background-color: #ccc;
+  background-color:blue;
+  color:floralwhite
 }
 
 /* Style the tab content */
 .tabcontent {
   display: none;
-  padding: 6px 12px;
-  border: 1px solid #ccc;
+  background-color:blue;
   border-top: none;
+  position:relative;
+  width:100%;
+  color:whitesmoke;
+}
+.outer_container{
+    background-color:blueviolet;
+    border-radius: 20px;
+}
+.inner_container {
+    background-color:blueviolet;
+    padding:30px;
+    border-radius: 20px;
 }
 
-.card_container {
-    background-color:red;
+.card-container{
+    width:100%;
 }
-
 .card_body{
-    background-color:red;
-    border-color:red;
-    border-radious:5px;
+    border-color:blueviolet;
+    border-radius:0 0 20px 20px;
+    padding: 20px 30px 30px 30px;
+    background-color:blueviolet;
 }
 
 .card_footer{
     background-color:blue;
-    border-radious:5px;
+    border-radius:0 0 20px 20px;
+    position:absolute;
+    width:100%;
+}
+
+.footer_inner{
+    padding: 20px 30px 20px 30px;
 }

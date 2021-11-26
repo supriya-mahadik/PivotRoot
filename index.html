@@ -14,23 +14,103 @@
   
 <body>
     <section>
-        
-            <div class="card_container">
-            <!-- <div id="PRoot"></div> -->
-                <div class="tab">
-                    <button class="tablinks" onclick="openCourse(event, 'Yearly')">Yearly Courses</button>
-                    <button class="tablinks" onclick="openCourse(event, 'Monthly')">Monthly Courses</button>
-                </div>
-                
-                <div id="Yearly" class="tabcontent">
-                    <div class="card_body">Hello world 1</div>
-                    <div class="card_footer">Hello world 2 </div>
-                </div>
-                
-                <div id="Monthly" class="tabcontent">
-                    <div class="card_body">Hello world 1</div>
-                    <div class="card_footer">Hello world 2</div>
-                </div>
+            <div class="note"><div>Guranteed Hogher scores! Only with easyMath</div></div>
+            <div class="outer_container">
+                <!-- <div class="inner_container"> -->
+                    <div class="tab">
+                        <button id="yearly" class="tablinks active" onclick="openCourse(event, 'Yearly')">Yearly Courses</button>
+                        <button id="monthly" class="tablinks" onclick="openCourse(event, 'Monthly')">Monthly Courses</button>
+                    </div>
+                   
+                    <div id="Yearly" class="tabcontent" style="display: block;">
+                        <div class="card_body">
+                            <select name="yGrades" id="yGrades"></select>
+                            <div class="boardsTab" id="boardsTab"></div>
+                            <div class="syllabus">
+                                <div class="course_info">
+                                    <div>
+                                        <div>Total Sessions</div>
+                                        <div id="totalSessions"></div>
+                                    </div>
+                                    <div>
+                                        <div>Online pre assessments</div>
+                                        <div id="olPreAsmt"></div>
+                                    </div>
+                                    <div>
+                                        <div>Online post assessments</div>
+                                        <div id="olPostAsnt"></div>
+                                    </div>
+                                    <div>
+                                        <div>Online practice</div>
+                                        <div id="olPractice"></div>
+                                    </div>
+                                    <div>
+                                        <div>Online tests</div>
+                                        <div id="olTests"></div>
+                                    </div>
+                                    <div>
+                                        <div>career counselling sessions with Edu coach</div>
+                                        <div id="careerSessions"></div>
+                                    </div>
+                                </div>
+                                <div class="course_topics">
+                                    <div>Course Topics Include</div>
+                                    <div id="syllabus"></div>
+                                </div>    
+                            </div>
+                        </div>
+                        <div class="card_footer">
+                            <div class="footer_inner">
+                                <div class="ft_sections_one">
+                                    <div>
+                                        <div>Filling out soon</div>
+                                        <div>
+                                            <span>Vacant Seats</span>
+                                            <span id="seats"></span>
+                                        </div>
+                                        <div>Not a classroom, but 1:1 sessions.</div>
+                                    </div>
+                                    <div>
+                                        <div id="discount"></div>
+                                        <div>Subscription cost:<span id="price"></span></div>
+                                        <div>This cost is inclusive of the tablet cost.</div>
+                                        <div>Per session cost is<span id="perClassPrice"></span></div>
+                                    </div>
+                                    <div>
+                                        <button>Book now</button>
+                                    </div>
+                                </div>
+                                <div class="ft_sections_two">
+                                    <div>You can also avail a 8 inch and 10 inch tablet with your subscription</div>
+                                    <div>Guranteed <a href="#">terms and conditions</a> applied</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div id="Monthly" class="tabcontent">
+                        <div class="card_body">
+                            <select name="mGrades" id="mGrades"></select>
+                            <div class="mboardsTab" id="mboardsTab"></div>
+                            <div class="syllabus">
+                                <div class="course_info">
+                                    <div id="radioWrapper"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card_footer">
+                            <div class="footer_inner">
+                                <div class="footer_sec_wrapper">
+                                    <div>Mothly classes let you choose your own course topics</div>
+                                    <div>Each session lasts 45 minutes</div>
+                                    <div><button>Book now</button></div>
+                                </div>
+                                <div>Refund same day <a href="#">Terms And conditions</a>apply</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                <!-- </div> -->
             </div>    
               
             <script src="app.js"></script>
