@@ -33,7 +33,8 @@ function getYearlyData(data){
         $('#boardsTab').append($('<button/>', {
             text: boardName,
             id: 'btn_'+boardName,
-            click: () => displayBoardData(boardDataObj)
+            class: 'sub_tab',
+            click: function(){displayBoardData(boardDataObj,this)}
         }));
     })
     $('#boardsTab button:first-child').click();
@@ -64,35 +65,44 @@ function displayBoardsTab(data, grade){
             $('#boardsTab').append($('<button/>', {
                 text: boardName,
                 id: 'btn_'+boardName,
-                click: () => displayBoardData(boardObject)
+                class: 'sub_tab',
+                click: function() { displayBoardData(boardObject, this) }
             }));
         }
     }
 }
 
-function displayBoardData(boardObject){
+function displayBoardData(boardObject, selectedTab){
+    $('.sub_tab').removeClass("active");
+    $(selectedTab).addClass("active");
     $('#totalSessions').text(boardObject.total_sessions);
     $('#olPreAsmt').text(boardObject.online_pre_assignments);
     $('#olPostAsnt').text(boardObject.online_post_assignments);
     $('#olPractice').text(boardObject.online_assignments);
     $('#olTests').text(boardObject.online_tests);
     $('#careerSessions').text(boardObject.career_counselling_sessions);
+    $('#syllabus').html('');
     if(Array.isArray(boardObject.syllabus)){
         $.each(boardObject.syllabus[0], function (key, item) {
             let itemList = item.split("!").map(el => el.trim());
-            $('#syllabus').append(`<div>${key}</div>`);
+            const topicTitleEl = $('<div class="mt-1">');
+            topicTitleEl.append(`<div class="topic_title">${key}</div>`);
+            console.log(topicTitleEl);
             itemList.forEach(it => {
-                $('#syllabus').append(`<div>${it}</div>`);
+                topicTitleEl.append(`<div>${it}</div>`);
             });
+            $('#syllabus').append(topicTitleEl);
         });
     }else{
         let itemList = (boardObject.syllabus).split("!").map(el => el.trim());
+        const topicTitleEl = $('<div class="mt-1">');
         itemList.forEach(it => {
-            $('#syllabus').append(`<div>${it}</div>`);
+            topicTitleEl.append(`<div>${it}</div>`);
         });
+        $('#syllabus').append(topicTitleEl);
     }
    
-    $('#seats').text(boardObject.seats);
+    $('#seats').text(boardObject.seats+' seats');
     $('#discount').text(boardObject.discount);
     $('#price').text(boardObject.price);
     $('#perClassPrice').text(boardObject.per_class_price);
@@ -123,7 +133,8 @@ function getMonthlyData(data){
         $('#mboardsTab').append($('<button/>', {
             text: boardName,
             id: 'btn_'+boardName,
-            click: () => displayMonthlyBoardData(boardDataObj)
+            class: 'm_sub_tab',
+            click: function(){displayMonthlyBoardData(boardDataObj,this);}
         }));
     })
     $('#mboardsTab button:first-child').click();
@@ -154,31 +165,35 @@ function getMonthlyData(data){
             $('#mboardsTab').append($('<button/>', {
                 text: boardName,
                 id: 'btn_'+boardName,
-                click: () => displayMonthlyBoardData(boardObject)
+                class: 'm_sub_tab',
+                click: function() {displayMonthlyBoardData(boardObject,this);}
             }));
         }
     }
 }
 
-function displayMonthlyBoardData(boardObject){
+function displayMonthlyBoardData(boardObject,selectedTab){
+    $('.m_sub_tab').removeClass("active");
+    $(selectedTab).addClass("active");
     $('#radioWrapper').html('');
     $.each(boardObject, function (key, item) {
-            $('#radioWrapper')
-                .append(`<input type="radio" id="${key}" name="contact" value="${key}">
-                <label for="${key}">
-                    <div>
-                        <div class="valid">${item.valid}</div>
-                        <div class="refund">${item.refund}</div>
-                    </div>
-                    <div>
-                        <div class="price">${item.price}</div>
-                        <div class="discount">${item.discount}</div>
-                    </div>
-                    <div>
-                        <div class="perClassPrice">${item.per_class_price}</div>
-                        <div class="total_sessions">${item.total_sessions}</div>
-                    </div>
-                </label>`);
+        $('#radioWrapper')
+            .append(`<div class="radio_wrapper"><div><input type="radio" id="${key}" name="contact" value="${key}"></div>
+            <div>
+            <label for="${key}">
+                <div>
+                    <div class="valid">${item.valid}</div>
+                    <div class="refund">${item.refund}</div>
+                </div>
+                <div>
+                    <div class="price"><span><span>&#8377</span>${item.price}</span></div>
+                    <div class="discount"><span>${item.discount}<span>% OFF</span></span></div>
+                </div>
+                <div>
+                    <div class="perClassPrice"><span><span>&#8377</span>${item.per_class_price}<span>&nbsp;per session</span></span></div>
+                    <div class="total_sessions"><span>${item.total_sessions}<span>&nbsp;Sessions</span></span><div>
+                </div>
+            </label></div></div>`);
        
         
     });

@@ -1,32 +1,39 @@
 body {font-family: Arial;}
 .note {
     border-radius: 10px 10px 0 0;
-    background-color: darksalmon;
+    background-color: #f9cb0e;
     width:fit-content;
     padding:10px;
     margin-left:2%;
+    color:#505235;
+}
+
+.note span{
+    text-transform:capitalize;
 }
 
 /* Style the tab */
 .tab {
   overflow: hidden;
-  background-color: blueviolet;
-  border-radius: 20px 20px 0 0;
-  padding: 30px 30px 0 30px;
+  background-color: #6053c9;
+  border-radius: 30px 30px 0 0;
+  padding: 70px;
 }
 
 /* Style the buttons inside the tab */
 .tab button {
-  background-color: inherit;
-  float: left;
+    background-color: inherit;
+    float: left;
     border: none;
     outline: none;
     cursor: pointer;
     padding: 9px 16px;
     transition: 0.3s;
-    font-size: 17px;
+    font-size: 22px;
     border-radius: 20px;
     font-weight: bold;
+    color:#fff;
+    margin-right: 20px;
 }
 
 /* Change background color of buttons on hover */
@@ -36,25 +43,25 @@ body {font-family: Arial;}
 
 /* Create an active/current tablink class */
 .tab button.active {
-  background-color:blue;
+  background-color:#0b2f90;
   color:floralwhite
 }
 
 /* Style the tab content */
 .tabcontent {
   display: none;
-  background-color:blue;
+  background-color:#0b2f90;
   border-top: none;
   position:relative;
   width:100%;
   color:whitesmoke;
 }
 .outer_container{
-    background-color:blueviolet;
+    background-color:#6053c9;
     border-radius: 20px;
 }
 .inner_container {
-    background-color:blueviolet;
+    background-color:#6053c9;
     padding:30px;
     border-radius: 20px;
 }
@@ -63,14 +70,14 @@ body {font-family: Arial;}
     width:100%;
 }
 .card_body{
-    border-color:blueviolet;
-    border-radius:0 0 20px 20px;
-    padding: 20px 30px 30px 30px;
-    background-color:blueviolet;
+    border-color:#6053c9;
+    border-radius:0 0 30px 30px;
+    padding: 0 70px 30px;
+    background-color:#6053c9;
 }
 
 .card_footer{
-    background-color:blue;
+    background-color:#0b2f90;
     border-radius:0 0 20px 20px;
     position:absolute;
     width:100%;
@@ -78,4 +85,307 @@ body {font-family: Arial;}
 
 .footer_inner{
     padding: 20px 30px 20px 30px;
+}
+
+.grade_tab{
+    display:flex;
+    margin:0 -5px;
+    margin-bottom:65px;
+}
+.grade_tab select{
+    width:20%;
+    margin:0 5px;
+}
+
+.grade_tab .boardsTab{
+    width:80%;
+    margin:0 5px;
+    display:flex;
+    justify-content: space-around;
+}
+
+.grade_tab .boardsTab button{
+    width:auto;
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 9px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+    border-radius: 20px;
+    font-weight: bold;
+    color: #fff;
+    margin-right: 20px;
+    text-transform: uppercase;
+}
+.grade_tab .boardsTab button.active{
+    background-color:#0b2f90;
+    color:floralwhite
+}
+.grade_tab .boardsTab button:hover {
+    background-color: #ddd;
+}
+select {
+    background-color:#6053c9;
+    border:0;
+    border-bottom: 3px solid #9990e1;
+    color:#fff;
+    text-transform: capitalize;
+    font-size:18px;
+    font-weight:600;
+}
+.card_body .syllabus .course_info{
+    display:flex;
+}
+.card_body .syllabus .course_info div{
+    width:18%;
+    display: flex;
+    flex-direction: column;
+}
+.card_body .syllabus .course_info div div:first-child{
+    font-size:18px;
+    font-weight:600;
+    width:65%;
+    text-transform: capitalize;
+}
+.card_body .syllabus .course_info div div:last-child{
+    margin-top:auto;
+    color:#f9cb0e;
+    font-size:42px;
+    font-weight: bold;
+}
+
+.card_body .course_topics .topics_heading{
+    font-size:22px;
+    font-weight:600;
+    text-transform: capitalize;
+    margin:50px 0 0;
+}
+.card_body .course_topics .syllabus{
+    display: flex;
+    flex-wrap: wrap;
+}
+.card_body .course_topics .syllabus .mt-1{
+    line-height:30px;
+    width:33.33%;
+}
+.card_body .course_topics .syllabus div.topic_title{
+    color:#ddc444;
+    width:100%;
+    text-transform: uppercase;
+}
+
+.mt-1 {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.card_footer .footer_inner .ft_sections_one{
+    display:flex;
+}
+.card_footer .footer_inner .ft_sections_one > div{
+    width:33.33%;
+    padding:50px;
+}
+.card_footer .footer_inner .ft_sections_one div .note2 {
+    border-radius: 5px;
+    background-color: #fff;
+    width:fit-content;
+    padding:2px;
+    color:#000;
+    font-size:14px;
+    margin-left:auto;
+}
+
+.card_footer .footer_inner .ft_sections_one div .vacant_seat_heading{
+    font-size:28px;
+    font-weight:bold;
+    text-transform: capitalize;
+    margin-bottom:20px;
+}
+
+.card_footer .footer_inner .ft_sections_one .vacant_seat_heading span{
+    color:#f9cb0e;
+    font-size:28px;
+    font-weight:bold;
+}
+
+.card_footer .footer_inner .ft_sections_one div .one_one_session{    
+    color:#fff;
+    font-size:16px;
+}
+.card_footer .footer_inner .ft_sections_one .book_now{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card_footer .footer_inner .ft_sections_one .book_now button {
+    background-color: #f9cb0e;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 16px 65px;
+    transition: 0.3s;
+    font-size: 17px;
+    border-radius: 20px;
+    font-weight: bold;
+    color:#000;
+}
+
+.card_footer .footer_inner .ft_sections_two {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding:30px 50px;
+}
+.card_footer .footer_inner .ft_sections_two div:first-child{
+    font-size:22px;
+    font-weight:bold;
+}
+.card_footer .footer_inner .ft_sections_two div:last-child{
+    font-size:14px;
+}
+.card_footer .footer_inner .ft_sections_two div:last-child a{
+    font-size:14px;
+    color:#fff;
+}
+.grade_tab .mboardsTab{
+    width:80%;
+    margin:0 5px;
+    display:flex;
+    justify-content: space-around;
+}
+.grade_tab .mboardsTab button{
+    width:auto;
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 9px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+    border-radius: 20px;
+    font-weight: bold;
+    color: #fff;
+    margin-right: 20px;
+    text-transform: uppercase;
+}
+.grade_tab .mboardsTab button.active{
+    background-color:#0b2f90;
+    color:floralwhite
+}
+.grade_tab .mboardsTab button:hover {
+    background-color: #ddd;
+}
+
+.card_body .syllabus .course_info #radioWrapper{
+    width:100%;
+}
+.card_body .syllabus .course_info #radioWrapper .radio_wrapper{
+    display:flex;
+    flex-direction:row;
+    width:100%;
+    background-color:#7b6fd1;
+    margin-bottom:20px;
+    border-radius: 20px;
+}
+.card_body .syllabus .course_info #radioWrapper .radio_wrapper > div:first-child{
+    width:3%;
+    padding:15px 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card_body .syllabus .course_info #radioWrapper .radio_wrapper > div:last-child{
+    width:97%;
+    display:flex;
+    padding:15px 30px;
+}
+.card_body .syllabus .course_info  #radioWrapper .radio_wrapper label{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card_body .syllabus .course_info  #radioWrapper .radio_wrapper label >div{
+    width:33.33%;
+}
+.card_body .syllabus .course_info  #radioWrapper .radio_wrapper label >div .valid{
+    color: #fff;
+    line-height: 1.5;
+    font-size: 22px;
+}
+.card_body .syllabus .course_info  #radioWrapper .radio_wrapper label >div .refund{
+    color:#fff;
+    font-size:14px;
+    width:100%;
+    margin-top:0;
+    font-weight:normal;
+ }
+ .card_body .syllabus .course_info  #radioWrapper .radio_wrapper label >div .price{
+    display:flex;
+    margin-top: auto;
+    color: #feaf0e;
+    font-size: 38px;
+    font-weight: bold;
+ }
+ .card_body .syllabus .course_info  #radioWrapper .radio_wrapper label >div .discount{
+    background-color:#6053c9;
+    font-size:12px;
+    border-radius: 5px;
+    width: fit-content;
+    padding: 3px;
+    color:#fff;
+ }
+ .card_body .syllabus .course_info  #radioWrapper .radio_wrapper label >div{
+     margin-top:0;
+ }
+ .card_body .syllabus .course_info  #radioWrapper .radio_wrapper label >div .perClassPrice{
+    color: #fff;
+    line-height: 1.5;
+    font-size: 20px;
+    text-transform: lowercase;
+    margin-top:0;
+ }
+ .card_body .syllabus .course_info  #radioWrapper .radio_wrapper label >div .total_sessions{
+    color:#fff;
+    font-size:14px;
+    width:100%;
+    margin-top:0;
+    font-weight:normal;
+ }
+ .card_footer .footer_inner .footer_sec_wrapper{
+     display:flex;
+     padding:30px;
+ }
+ .card_footer .footer_inner .footer_sec_wrapper >div{
+     width:33.33%;
+     font-size:26px;
+     padding:15px;
+ }
+ .card_footer .footer_inner .footer_sec_wrapper .book_now{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card_footer .footer_inner .footer_sec_wrapper .book_now button {
+    background-color: #f9cb0e;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 16px 65px;
+    transition: 0.3s;
+    font-size: 17px;
+    border-radius: 20px;
+    font-weight: bold;
+    color:#000;
+}
+.terms{
+    padding:30px;
+    text-align: right;
+}
+.terms a{
+    color:#fff;
 }
