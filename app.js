@@ -103,7 +103,7 @@ function displayBoardData(boardObject, selectedTab){
     }
    
     $('#seats').text(boardObject.seats+' seats');
-    $('#discount').text(boardObject.discount);
+    $('#discount').text(boardObject.discount+'% OFF');
     $('#price').text(boardObject.price);
     $('#perClassPrice').text(boardObject.per_class_price);
 }
@@ -178,7 +178,7 @@ function displayMonthlyBoardData(boardObject,selectedTab){
     $('#radioWrapper').html('');
     $.each(boardObject, function (key, item) {
         $('#radioWrapper')
-            .append(`<div class="radio_wrapper"><div><input type="radio" id="${key}" name="contact" value="${key}"></div>
+            .append(`<div class="radio_wrapper"><div><input type="radio" id="${key}" name="contact" value="${key}" ${key == '5_sessions' ? 'checked' : ''}></div>
             <div>
             <label for="${key}">
                 <div>

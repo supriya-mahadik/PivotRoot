@@ -3,13 +3,17 @@ body {font-family: Arial;}
     border-radius: 10px 10px 0 0;
     background-color: #f9cb0e;
     width:fit-content;
-    padding:10px;
+    padding:16px;
     margin-left:2%;
-    color:#505235;
+    color:#0b2f90;
+    font-weight:500;
+    font-size:18px;
 }
-
-.note span{
+.note span:first-child{
     text-transform:capitalize;
+}
+.note span:last-child{
+    text-transform:normal;
 }
 
 /* Style the tab */
@@ -194,9 +198,13 @@ select {
     background-color: #fff;
     width:fit-content;
     padding:2px;
-    color:#000;
+    color:#0b2f90;
     font-size:14px;
     margin-left:auto;
+    margin-right:30%;
+    margin-bottom:5px;
+    font-weight: 600;
+    font-size: 16px;
 }
 
 .card_footer .footer_inner .ft_sections_one div .vacant_seat_heading{
@@ -358,17 +366,22 @@ select {
  }
  .card_footer .footer_inner .footer_sec_wrapper{
      display:flex;
-     padding:30px;
+     padding:0 30px;
+     justify-content: space-between
  }
  .card_footer .footer_inner .footer_sec_wrapper >div{
      width:33.33%;
      font-size:26px;
      padding:15px;
  }
+ .card_footer .footer_inner .footer_sec_wrapper >div p{
+    width:80%;
+}
  .card_footer .footer_inner .footer_sec_wrapper .book_now{
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: flex-end;
+    
 }
 .card_footer .footer_inner .footer_sec_wrapper .book_now button {
     background-color: #f9cb0e;
@@ -383,7 +396,7 @@ select {
     color:#000;
 }
 .terms{
-    padding:30px;
+    padding:10px;
     text-align: right;
 }
 .terms a{
