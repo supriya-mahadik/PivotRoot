@@ -87,7 +87,6 @@ function displayBoardData(boardObject, selectedTab){
             let itemList = item.split("!").map(el => el.trim());
             const topicTitleEl = $('<div class="mt-1">');
             topicTitleEl.append(`<div class="topic_title">${key}</div>`);
-            console.log(topicTitleEl);
             itemList.forEach(it => {
                 topicTitleEl.append(`<div>${it}</div>`);
             });
@@ -193,8 +192,6 @@ function displayMonthlyBoardData(boardObject,selectedTab){
                     <div class="perClassPrice"><span><span>&#8377</span>${item.per_class_price}<span>&nbsp;per session</span></span></div>
                     <div class="total_sessions"><span>${item.total_sessions}<span>&nbsp;Sessions</span></span><div>
                 </div>
-            </label></div></div>`);
-       
-        
+            </label></div></div>`); 
     });
 }

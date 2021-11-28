@@ -1,13 +1,18 @@
 body {font-family: Arial;}
+article {
+    max-width:85rem;
+    margin:0 auto;
+    width:100%;
+}
 .note {
-    border-radius: 10px 10px 0 0;
+    border-radius: 0.6rem 0.6rem 0 0;
     background-color: #f9cb0e;
     width:fit-content;
-    padding:16px;
+    padding:1rem;
     margin-left:2%;
     color:#0b2f90;
     font-weight:500;
-    font-size:18px;
+    font-size:1.1rem;
 }
 .note span:first-child{
     text-transform:capitalize;
@@ -20,8 +25,8 @@ body {font-family: Arial;}
 .tab {
   overflow: hidden;
   background-color: #6053c9;
-  border-radius: 30px 30px 0 0;
-  padding: 70px;
+  border-radius: 1.8rem 1.8rem 0 0;
+  padding: 4.3rem;
 }
 
 /* Style the buttons inside the tab */
@@ -31,13 +36,13 @@ body {font-family: Arial;}
     border: none;
     outline: none;
     cursor: pointer;
-    padding: 9px 16px;
+    padding: 0.5rem 1rem;
     transition: 0.3s;
-    font-size: 22px;
-    border-radius: 20px;
+    font-size: 1.37rem;
+    border-radius: 1.2rem;
     font-weight: bold;
     color:#fff;
-    margin-right: 20px;
+    margin-right: 1.2rem;
 }
 
 /* Change background color of buttons on hover */
@@ -62,12 +67,12 @@ body {font-family: Arial;}
 }
 .outer_container{
     background-color:#6053c9;
-    border-radius: 20px;
+    border-radius: 1.2rem;
 }
 .inner_container {
     background-color:#6053c9;
-    padding:30px;
-    border-radius: 20px;
+    padding:1.8rem;
+    border-radius: 1.2rem;
 }
 
 .card-container{
@@ -75,35 +80,35 @@ body {font-family: Arial;}
 }
 .card_body{
     border-color:#6053c9;
-    border-radius:0 0 30px 30px;
-    padding: 0 70px 30px;
+    border-radius:0 0 1.8rem 1.8rem;
+    padding: 0 4.3rem 1.8rem;
     background-color:#6053c9;
 }
 
 .card_footer{
     background-color:#0b2f90;
-    border-radius:0 0 20px 20px;
+    border-radius:0 0 1.2rem 1.2rem;
     position:absolute;
     width:100%;
 }
 
 .footer_inner{
-    padding: 20px 30px 20px 30px;
+    padding: 1.2rem 1.8rem 1.2rem 1.8rem;
 }
 
 .grade_tab{
     display:flex;
-    margin:0 -5px;
-    margin-bottom:65px;
+    margin:0 -0.3rem;
+    margin-bottom:4rem;
 }
 .grade_tab select{
     width:20%;
-    margin:0 5px;
+    margin:0 0.3rem;
 }
 
 .grade_tab .boardsTab{
     width:80%;
-    margin:0 5px;
+    margin:0 0.3rem;
     display:flex;
     justify-content: space-around;
 }
@@ -115,13 +120,13 @@ body {font-family: Arial;}
     border: none;
     outline: none;
     cursor: pointer;
-    padding: 9px 16px;
+    padding: 0.5rem 1rem;
     transition: 0.3s;
-    font-size: 17px;
-    border-radius: 20px;
+    font-size: 1rem;
+    border-radius: 1.2rem;
     font-weight: bold;
     color: #fff;
-    margin-right: 20px;
+    margin-right: 1.2rem;
     text-transform: uppercase;
 }
 .grade_tab .boardsTab button.active{
@@ -134,10 +139,10 @@ body {font-family: Arial;}
 select {
     background-color:#6053c9;
     border:0;
-    border-bottom: 3px solid #9990e1;
+    border-bottom: 0.18rem solid #9990e1;
     color:#fff;
     text-transform: capitalize;
-    font-size:18px;
+    font-size:1.1rem;
     font-weight:600;
 }
 .card_body .syllabus .course_info{
@@ -149,30 +154,32 @@ select {
     flex-direction: column;
 }
 .card_body .syllabus .course_info div div:first-child{
-    font-size:18px;
+    font-size:1.1rem;
     font-weight:600;
     width:65%;
     text-transform: capitalize;
+    word-break:break-word;
 }
 .card_body .syllabus .course_info div div:last-child{
     margin-top:auto;
     color:#f9cb0e;
-    font-size:42px;
+    font-size:2.37rem;
     font-weight: bold;
 }
 
 .card_body .course_topics .topics_heading{
-    font-size:22px;
+    font-size:1.37rem;
     font-weight:600;
     text-transform: capitalize;
-    margin:50px 0 0;
+    margin:3.12rem 0 0;
 }
 .card_body .course_topics .syllabus{
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
 }
 .card_body .course_topics .syllabus .mt-1{
-    line-height:30px;
+    line-height:1.8rem;
     width:33.33%;
 }
 .card_body .course_topics .syllabus div.topic_title{
@@ -191,38 +198,38 @@ select {
 }
 .card_footer .footer_inner .ft_sections_one > div{
     width:33.33%;
-    padding:50px;
+    padding:3.12rem;
 }
 .card_footer .footer_inner .ft_sections_one div .note2 {
-    border-radius: 5px;
+    border-radius: 0.3rem;
     background-color: #fff;
     width:fit-content;
     padding:2px;
     color:#0b2f90;
-    font-size:14px;
+    font-size:0.87rem;
     margin-left:auto;
     margin-right:30%;
-    margin-bottom:5px;
+    margin-bottom:0.3rem;
     font-weight: 600;
-    font-size: 16px;
+    font-size: 1rem;
 }
 
 .card_footer .footer_inner .ft_sections_one div .vacant_seat_heading{
-    font-size:28px;
+    font-size:1.7rem;
     font-weight:bold;
     text-transform: capitalize;
-    margin-bottom:20px;
+    margin-bottom:1.2rem;
 }
 
 .card_footer .footer_inner .ft_sections_one .vacant_seat_heading span{
     color:#f9cb0e;
-    font-size:28px;
+    font-size:1.7rem;
     font-weight:bold;
 }
 
 .card_footer .footer_inner .ft_sections_one div .one_one_session{    
     color:#fff;
-    font-size:16px;
+    font-size:1rem;
 }
 .card_footer .footer_inner .ft_sections_one .book_now{
     display: flex;
@@ -234,10 +241,10 @@ select {
     border: none;
     outline: none;
     cursor: pointer;
-    padding: 16px 65px;
+    padding: 1rem 4rem;
     transition: 0.3s;
-    font-size: 17px;
-    border-radius: 20px;
+    font-size: 1rem;
+    border-radius: 1.2rem;
     font-weight: bold;
     color:#000;
 }
@@ -246,22 +253,23 @@ select {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
-    padding:30px 50px;
+    padding:1.8rem 3.12rem;
 }
 .card_footer .footer_inner .ft_sections_two div:first-child{
-    font-size:22px;
+    font-size:1.37rem;
     font-weight:bold;
 }
 .card_footer .footer_inner .ft_sections_two div:last-child{
-    font-size:14px;
+    font-size:0.87rem;
+    text-align:right;
 }
 .card_footer .footer_inner .ft_sections_two div:last-child a{
-    font-size:14px;
+    font-size:0.87rem;
     color:#fff;
 }
 .grade_tab .mboardsTab{
     width:80%;
-    margin:0 5px;
+    margin:0 0.3rem;
     display:flex;
     justify-content: space-around;
 }
@@ -272,13 +280,13 @@ select {
     border: none;
     outline: none;
     cursor: pointer;
-    padding: 9px 16px;
+    padding: 0.5rem 1rem;
     transition: 0.3s;
-    font-size: 17px;
-    border-radius: 20px;
+    font-size: 1rem;
+    border-radius: 1.2rem;
     font-weight: bold;
     color: #fff;
-    margin-right: 20px;
+    margin-right: 1.2rem;
     text-transform: uppercase;
 }
 .grade_tab .mboardsTab button.active{
@@ -297,12 +305,12 @@ select {
     flex-direction:row;
     width:100%;
     background-color:#7b6fd1;
-    margin-bottom:20px;
-    border-radius: 20px;
+    margin-bottom:1.2rem;
+    border-radius: 1.2rem;
 }
 .card_body .syllabus .course_info #radioWrapper .radio_wrapper > div:first-child{
     width:3%;
-    padding:15px 30px;
+    padding:0.9rem 1.8rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -310,7 +318,7 @@ select {
 .card_body .syllabus .course_info #radioWrapper .radio_wrapper > div:last-child{
     width:97%;
     display:flex;
-    padding:15px 30px;
+    padding:0.9rem 1.8rem;
 }
 .card_body .syllabus .course_info  #radioWrapper .radio_wrapper label{
     display: flex;
@@ -323,11 +331,11 @@ select {
 .card_body .syllabus .course_info  #radioWrapper .radio_wrapper label >div .valid{
     color: #fff;
     line-height: 1.5;
-    font-size: 22px;
+    font-size: 1.37rem;
 }
 .card_body .syllabus .course_info  #radioWrapper .radio_wrapper label >div .refund{
     color:#fff;
-    font-size:14px;
+    font-size:0.87rem;
     width:100%;
     margin-top:0;
     font-weight:normal;
@@ -336,15 +344,15 @@ select {
     display:flex;
     margin-top: auto;
     color: #feaf0e;
-    font-size: 38px;
+    font-size: 2.37rem;
     font-weight: bold;
  }
  .card_body .syllabus .course_info  #radioWrapper .radio_wrapper label >div .discount{
     background-color:#6053c9;
-    font-size:12px;
-    border-radius: 5px;
+    font-size:0.75rem;
+    border-radius: 0.3rem;
     width: fit-content;
-    padding: 3px;
+    padding: 0.18rem;
     color:#fff;
  }
  .card_body .syllabus .course_info  #radioWrapper .radio_wrapper label >div{
@@ -353,26 +361,26 @@ select {
  .card_body .syllabus .course_info  #radioWrapper .radio_wrapper label >div .perClassPrice{
     color: #fff;
     line-height: 1.5;
-    font-size: 20px;
+    font-size: 1.2rem;
     text-transform: lowercase;
     margin-top:0;
  }
  .card_body .syllabus .course_info  #radioWrapper .radio_wrapper label >div .total_sessions{
     color:#fff;
-    font-size:14px;
+    font-size:0.87rem;
     width:100%;
     margin-top:0;
     font-weight:normal;
  }
  .card_footer .footer_inner .footer_sec_wrapper{
      display:flex;
-     padding:0 30px;
+     padding:0 1.8rem;
      justify-content: space-between
  }
  .card_footer .footer_inner .footer_sec_wrapper >div{
      width:33.33%;
-     font-size:26px;
-     padding:15px;
+     font-size:1.6rem;
+     padding:0.9rem;
  }
  .card_footer .footer_inner .footer_sec_wrapper >div p{
     width:80%;
@@ -388,17 +396,119 @@ select {
     border: none;
     outline: none;
     cursor: pointer;
-    padding: 16px 65px;
+    padding: 1rem 4rem;
     transition: 0.3s;
-    font-size: 17px;
-    border-radius: 20px;
+    font-size: 1rem;
+    border-radius: 1.2rem;
     font-weight: bold;
     color:#000;
 }
 .terms{
-    padding:10px;
+    padding:0.6rem;
     text-align: right;
 }
 .terms a{
     color:#fff;
+}
+
+@media (max-width:1024px){
+
+}
+
+@media (max-width:991px){
+    .card_footer .footer_inner .ft_sections_one .book_now button{
+        padding:1rem
+    }
+    .card_body .syllabus .course_info #radioWrapper .radio_wrapper label >div .price{
+        font-size:2rem;
+        word-break:initial;
+    }
+}
+
+@media (max-width:767px){
+    .card_body .syllabus .course_info div div:last-child{
+        font-size: 2rem;
+    } 
+    .card_footer .footer_inner .ft_sections_one .book_now button{
+        padding: 1rem 4rem;
+    }
+    .card_body .syllabus .course_info {
+        flex-wrap: wrap;
+    }
+    .card_body .syllabus .course_info div {
+        width: 33.33%;
+        margin-bottom: 0.4rem;
+    }
+    .card_footer .footer_inner .ft_sections_one {
+        flex-wrap:wrap;
+    }
+    .card_footer .footer_inner .ft_sections_one > div {
+        width:100%;
+        padding: 2rem 3.12rem;
+    }
+}
+
+@media (max-width:640px){
+    .grade_tab{
+        flex-direction: column;
+        margin:0 -0.3rem;
+        margin-bottom:4rem;
+    }
+    .grade_tab select{
+        width:100%;
+        margin:0 0 1rem;
+    }
+    
+    .grade_tab .boardsTab{
+        width:100%;
+        margin:0 0 1rem;
+        flex-wrap:wrap;
+    }
+    
+    .card_body .course_topics .syllabus .mt-1 {
+        width:50%;
+    }
+   
+    .card_footer .footer_inner .ft_sections_two{
+        flex-wrap:wrap;
+    }
+    .card_footer .footer_inner .ft_sections_two div:first-child {
+        width:100%;
+        margin-bottom:1rem;
+    }
+    .card_footer .footer_inner .ft_sections_two div:last-child {
+        width:100%;
+    }
+    .grade_tab .mboardsTab{
+        flex-wrap:wrap
+    }
+    .card_body .syllabus .course_info #radioWrapper .radio_wrapper label {
+        flex-wrap:wrap;
+    }
+    .card_body .syllabus .course_info #radioWrapper .radio_wrapper label >div{
+        width:100%;
+    }
+    .card_footer .footer_inner .footer_sec_wrapper {
+        flex-wrap:wrap;
+    }
+    .card_footer .footer_inner .footer_sec_wrapper >div {
+        padding:0.1rem;
+        width:100%;
+    }
+    .card_footer .footer_inner .footer_sec_wrapper .book_now {
+        justify-content: center;
+        margin-bottom:1rem;
+    }
+}
+
+@media (max-width:412px){
+    .tab{
+        padding: 1rem;
+    }
+    .card_body {
+        padding: 0 1rem 1.8rem; 
+    }
+    .footer_inner{
+        padding: 1.2rem 0;
+    }
 }
